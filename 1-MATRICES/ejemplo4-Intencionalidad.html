@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="contenido">
+            <h2 id="salida">Tu mundo de Cambio</h2>
+            <h3>Dios es realmente solo otro artista. El inventó la jirafa, el elefante
+                y el gato. No tiene un estilo real, simplemente sigue probando otras cosas
+                (Pablo Picasso)
+            </h3>
+        </div>
+        <div class="ala"></div>
+    </div>
+<script>
+    var item = ["Peinado desenfadado 18€",
+                "Corte Cromático cosmopolita 32€",
+                "Retoques de Barba, pelo, coloracion y decoloracion 22€",
+                "Cambio de Look! Corte, Color y tratamiento Capilar 55€",
+                "Renovación de Mirada! Pestañas, cejas, lobulo de ojo y tratamiento facial 49€",
+                 "Tu mundo lleno de alegria y color.." ];
+
+    
+    var indice =0;
+    //setInterval(funcion,tiempo en milisengudos) Ejecutará la funcion cada los segundos definidos
+    setInterval(muestraOfetas,3000);
+    function muestraOfetas(){
+      
+        if(indice>item.length){
+            indice=0;
+        }
+        document.getElementById("salida").innerHTML =item[indice];
+        indice++;
+    }
+
+</script>
+</body>
+
+</html>

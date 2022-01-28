@@ -1,0 +1,65 @@
+body{
+    background: #f2f2f2;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 600px;
+    background: #f2f2f2;
+    border-radius: 18px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+}
+.contenido{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: black;
+    padding: 40px;
+    font-family: "Merriweather",serif;
+}
+h2{
+   font-size: xx-large;
+font-weight: 900;
+text-align: center;
+color: rgb(141, 126, 126);
+}
+h3{
+    font-weight: 300;
+}
+.ala{
+    width: 100%;
+    height: 100%;
+}
+.ala::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background: white;
+    
+    background-repeat: no-repeat;
+    transition: 4s;
+}
+.ala::after{
+    position: absolute;
+content: "";
+height: 100%;
+width: 50%;
+right: 0;
+background: white;
+
+background-repeat: no-repeat;
+transition: 4s;
+
+}
+.container:hover .ala::after{
+    transform: translateX(300px);
+}
+.container:hover .ala::before{
+transform: translateX(-300px);
+}
