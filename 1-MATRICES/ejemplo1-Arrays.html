@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+    ----------------------MATRICES----------------------
+
+        DEFINICION: Será un conjunto de elementos colocados de forma adyacente
+        en la memoria de manera que nos permitirá referirnos a ellos con un solo nombre comun.
+        Ademas no se pierde la independencia de los mismos. Será una manera de agrupar datos para 
+        guardar de manera ordenada,!!!! Todo elemento perteciente a una matriz, lleva asociado
+        -un indice-
+
+        Tipos de matrices---
+        1.Segun la estabilidad de su tamaño:
+        - Tendrá un tamaño fijo, definada como matriz estatica.
+        -podrá cambiar de tamaño.
+        -A dinamica.
+
+        2.Sus sus dimensiones:
+        -Una sola dimension(Un grupo de elmentos).
+        -Matrices multidimensionales.
+       
+    *La propiedad length de la matrices o arrarys nos referenciará el tamaño de las misma
+    , es decir, numero de elementos
+    *Difentes sintaxis:
+
+        1. var miarray = new Array();
+        2. var miarray = new Array(3); Nos muestra el numero de elementos que posee.
+        3. var miarray = new Array("elemnto1","elemento2","elemento3");
+
+
+        En javaScript la matrices siempre empiezan numerandose por el 0.
+    -->
+<script>
+var numero = new Array(1,2,3,4,5,6,7);//Array de variable Global
+//recorrido los de un Array
+for( var i=0;i<numero.length;i++){
+
+    console.log(numero[i]);
+}
+//Otra manera de recorrer Arrays
+for(var i in numero){
+    console.log(numero[i]);
+}
+
+//recorrido de elmentos del Array
+for(var elemento of numero){
+    console.log(elemento);
+}
+//Recorrido mostrado en pagina
+
+document.write("Array: "+ numero + "<br/>");
+
+//METODOS DEL OBJETO ARRAY:
+
+//Array invertido
+document.write("Array invertido: " + numero.reverse()+"<br/>");
+//Array ascendente
+document.write("Array ascendente " + numero.sort()+"<br/>");
+//Array separdos por "|"
+document.write("Array join: "+ numero.join()+"<br/>");
+//Array de los elementos de las posiciones de la 3 a la 5(3 elementos)
+document.write("Array posciones 3 a 5: " +numero.slice(3,6)+ "<br/>");
+//Array de los elementos a partir o desde un indice
+document.write("Array a partir del indice 4" + numero.slice(4)+"<br/>");
+
+//Creamos otro Array ↓
+var letras = ["a","b","c","d","e"];
+
+//Concatenación numeros y letras
+document.write("Concatenacion de dos arrays: " + numero.concat(letras)+"<br/>");
+//concatenacion inversa
+document.write("Concatenacion inversa "+ letras.concat(numero));
+
+</script>
+
+
+
+</body>
+
+</html>
