@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito de las</title>
+</head>
+<body>
+   <!--
+            -Ámbitos-
+
+    a) ECMA6, va a incluir un nuevo concepto de ambito dentro de nuestros bloques
+    Anteriormente, las variables limitaban su ambito a las funciones donde se 
+    encontraban definidas. Y podián acceder al ambito superior del contexto de 
+    la funcion.
+
+    var cinco =5;
+    var otroTres= "Tres";
+
+    funtion ambito1(){
+        var tres = 3;
+        var otroCinco="cinco";//Correcta
+        var otroTres="Tres";//Error
+    }
+    funtion ambito2(){
+        var siete = 7;
+        var otroCinco ="cinco"//Correcta
+        var otrosTres = "tres";//Error
+    }
+DECLARACION DE VARIABLES ----------------
+A) La declaracion de la variable var seguirá funcionando de la misma manera.
+Surgiendo como apoyo dos nuevas maneras de declarar variables: let y const.
+B) las variables definidas con los modificadores const y let, utilizan los bloques
+creados a partir de llaves, como contenedores de ambito.
+C) Quedando restringidas a su ambito.
+Ejemplo:
+   -->
+   
+   <script>
+       //Variables Globales; pueden declararse con var o let
+       //var i =0;
+      // for (i=0; i<10;i++){
+        //   let j =i;
+      // }
+       //document.write("Variable local" + j + "<br/>");
+       //document.write("Variable global" + i + "<br/>");
+       /*
+       let = var 
+       */
+var i = 0;
+for(i=0; i<10;i+=1){
+    var j =i;//9
+    //let k = i; //Undefined
+}
+console.log(j);
+console.log(k);
+/*
+const, serán principalmente solo de -VALOR DE LECTURA-. Una vez utilizadas con algun
+identificador, este en si no podrá ser reasignados:
+Ejemplo:
+*/
+const texto = "Hola";
+document.write(texto);
+//texto = "Adios";//Error, no se puede cambiar el valor de la constante.
+
+   </script>
+</body>
+</html>

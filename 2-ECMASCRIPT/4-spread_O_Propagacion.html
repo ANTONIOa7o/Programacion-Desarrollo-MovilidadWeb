@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador de Propagacion</title>
+</head>
+<body>
+    <!--
+            ------SPREAD-------
+Este permitirá que una expresión sea extendida en situaciones donde se 
+esperen multiples argumentos(llamadas a funciones) o multiples elementos(arrays)
+Ejemplo:
+    -->
+    <script>
+        /*
+        El simbolo para representar dicho operador de propagacion son tres puntos (...)
+        */ 
+        const agregar = (a,b)=>a+b;
+        let argumentos = [3,5];
+        console.log(agregar(...argumentos));
+        //Equivale: console.log(agregar(3,5));
+
+        /*
+        Realizado con objetos definidos de manera literal
+        ej:
+        */
+var nombre = new Array('Juan','Pedro','Luis','Maria');
+document.write(nombre + "<br/>");
+//operador spread
+document.write(...nombre + "<br/>");
+
+var otrosNombres =['Ismael','Rocio',...nombre,'Jorge'];
+document.write(otrosNombres+"br/>");
+
+/* Concatenando de manera mas sencilla dento de un array
+let cde =['c','d','e'];
+let letras =['a','b',...cde,'f','g'];
+console.log(letras)
+*/
+//otra forma de concatenar
+
+let mapABC = {a:5,b:6,c:3};
+let mapABCD = {...mapABC,d:7};//a:5,b:6,c:3,d:7
+console.log(mapABCD.a)//5
+
+//solo se puede utilizar con elementos ITERABLES
+let numero = 4;
+console.log(...numero);
+
+
+
+
+
+    </script>
+
+</body>
+</html>

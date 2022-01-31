@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables de Argumento</title>
+</head>
+<body>
+    <!--
+            Varibles de Argumento
+    
+    OBSERVACION:
+    No confundamos el operador anterior (spread) con el uso que tienen los tres
+    puntos en la definicion de argumentos en la declaracion de una funcion.
+
+* Será una forma de definir los argumentos que estamos indicando, al metodo en 
+concreto donde se le pueden pasar multiples variables.
+Ejemplo:
+-->
+<script>            // parametro rest ↓
+    function mostrarElementos(...muestra){
+        console.log(muestra);
+        console.log(muestra[0]);
+    }
+    mostrarElementos(2,5,1);
+    mostrarElementos(3);
+
+    //Esencia del rest
+
+    function sumar(...numeros){
+        // Vamos a procesarlo como si fuera un array
+        let suma =0;
+        for(let num of numeros){
+            suma+=num;
+        }
+    return suma;
+    }
+    // El parametro rest, en este caso será unico y aparecerá el ultiimo
+
+    function multiplicar(n1,n2, ...n3){
+        let resultado = n1*n2
+        for(let num of n3){
+            resultado*=num;
+        }
+        return resultado;
+    }
+    console.log("sumar(5,7) " + sumar(5,7));
+    console.log("sumar(5,7,3" + sumar(5,7,3));
+    console.log("sumar(4,1,7,9,3,5,6,8)+ " + sumar(4,1,7,9,3,5,6,8));
+    console.log("multiplicar(4,1,7,9,3,5,6,8) "+multiplicar(4,1,7,9,3,5,6,8) );
+
+</script>
+</body>
+</html>

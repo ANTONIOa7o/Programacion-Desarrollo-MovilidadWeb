@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <!--
+
+            -----------Template Strings --------------
+ En un principio javaScript:
+   a) las cadenas de caracteres vienene definidas por
+    comillas simples o dobles; 
+   b) Además que no existia la posibilidad de insertar 
+    cualquier tipo de variable, dentro de esa cadena.
+   c)En las concatenaciones teniamos una realidad establecida:
+   var nombre = "Mario";
+   var edad = 32;
+   console.log("Hola, me llamo: "+nombre+ "y tengo " + edad+ "años");
+Aportaciones que ofrece Ecma6
+a) incluye un nuevo tipo de string, delimitado por el simbolo ====> `.
+b) Podremos incluir nuevas lineas
+c) Ademas, existirá un nuevo formato para la inclusion de variables dentro de
+estos string ====> $
+Ejemplo:
+    -->
+ <script>
+     var nombre ="Toño";
+     var apellidos = "Cuadrado";
+     var edad = 45;
+     document.write("Hola me llamo " + nombre+ " "+ apellidos+
+      " y tengo "+ edad +"años"+"<br/>");
+      document.write(`Hola me llamo ${nombre}${apellidos} y tengo ${edad}años`);
+ </script>
+
+</body>
+</html>

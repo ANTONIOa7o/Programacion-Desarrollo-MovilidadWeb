@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+<body>
+    <!------------------------ECMASCRIPT---------------------
+Será el lenguaje que habitualmente conocemos com JavaScript, en su version 
+mas ortodoxa.
+Las caracteristicas principales en esta nueva version:
+1.Arrows(=>)
+2.Clases
+3.Template, Strings
+4.Herencias.
+5.Declaradacion de variables
+    -->
+<!--
+
+                -FOR EACH-
+                
+Este método está dentro del grupo de iterables(repeticion, bucles..)con el matiz
+sin devolver una nueva matriz. lo que hace realmente es ejecutar una funcion por
+cada elemento del Array. Esta iteracion en un principio partia de la declaracion
+(3 variables)con la siguiente sintaxis:
+1.valor(elemento)
+2.indice
+3.Array
+
+[inicio]
+    varArray.forEach(funtion(elemento, indice, Array)){
+        metodos declarados(sentencias, ...);
+    }
+
+[1º evolucion]
+
+    varArray.forEach(funtion(elemento){
+
+         console.log(elemento);
+    });
+   
+
+[2ª evolucion]  uso de => asociada de ECMA A TYPE
+ varArray.forEach(elemento)=>console.log(elemento);
+
+-->
+
+<script>
+
+    var datos = [1,2,3,4,5,6,7,8];
+
+    //Recorrido de array de forma tradicional
+
+    for(var item of datos){
+        console.log(item);
+    }
+    //Recorrido de forma Arrow
+    datos.forEach(item=> {
+        console.log(item);
+    });
+/*
+---------La sentencia return------------
+Finaliza la ejecución de la funcion, y especific un valor para ser devuelto
+a quien llama la funcion.
+Primero, es como si forzara una salidad inmediata de la función en que se encuentra.
+seguidamente se puede utilizar para devolver el valor.
+*/
+var otraFuncion = function(numero){
+  return numero + 2;
+}
+
+//var otraFuncion = (numero) => numero+2;
+console.log(otraFuncion(6));
+</script>
+    
+</body>
+</html>
