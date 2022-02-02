@@ -1,0 +1,65 @@
+<!--
+
+--------------/ TIPOS: Data Binding en Angular
+
+1º StringInterpolation- {{}} TypeScript => HTML
+  Desarrollar o presentar una informacion (Variable, Array,...) y mostrarla
+  en HTML, para la vista del usuario.
+
+2º PropertyBinding- []TypeScript <= HTML
+Informacion del lado de HTML, accion por parte del usuario y nosotros establecemos 
+un valor (defecto, tiempo, estilo....)
+
+3º EventBinding- ()TypeScript <= HTML
+la escucha de eventos desde HTML.
+
+4º Two way Data-Binding- [()]TypeScript<=>HTML
+Comunicación de dos vias. Cliente(html) a TypeScript y viceversa.ed:
+de visualizacion(usuario) a Type y de Type a Visualizacion(usuario)
+
+-->
+
+<div class="container">
+  <h2 style="text-align: center;">---Ejemplos de Binding---</h2>
+  <h3>String Interpolation</h3>
+
+  {{title}}<br />
+  {{nombre+ " "}} <br />
+  {{3+7-2}} <br />
+  <hr>
+
+  <h3>Property Binding</h3>
+  <button class="btn btn-warning" [disabled]="habilitado">Púlsame</button>
+  <hr>
+
+  <h3>Event Binding</h3>
+  <button class="btn btn-secondary" (click)="saludar()">Saludar</button>
+  <hr>
+
+  <h3>Two Way data Binding</h3>
+  <div>
+    <label> Anotaciones:</label>&nbsp;
+    <input type="text" placeholder="escribe aqui" [(ngModel)]='nombre' />
+    <p>
+      Escribe:&nbsp;{{nombre+" "+" " + apellido}}
+    </p>
+    <!--
+    la directiva [(ngModel)] nos ofrece la sincronizacion de los DATOS, ESTRUCTURA, de 
+    HTML y los de su "modelo"(a la referencia definida en ts). Ésta directiva guarda el
+    valor que tenga la propiedad=> y actualiza dicha propiedad, siempre y cuando
+    haya interaccion por parte del usuario.
+  -->
+
+  </div>
+  <!--
+  utilizan estas construcciones:
+  1- crear secccion div que al estar el raton encima(event)muestre
+  el color verde, y rojo al salir.
+  2. Mostrar el color como texto debajo de ese div 
+  *Aplicar estilos declarados en css, será desde [class]=''
+-->
+<div (mouseover)='this.estilo="verde"' (mouseout)='this.estilo="rojo"'[class]='estilo' />
+el color mostrado es: {{estilo}}
+</div>
+
+</div>
